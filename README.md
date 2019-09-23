@@ -30,10 +30,11 @@ Download the archive and export it to a directory called ```directory-with-initi
 
 You can access the volume directly with 
 
-       docker run -it --rm --mount source=slack-archive-bot,target=/app ubuntu
-       # then you'll see the slack.sqlite file with
-       # ls /app/slack.sqlite
-        
+```
+docker run -it --rm --mount source=slack-archive-bot,target=/app ubuntu
+# then you'll see the slack.sqlite file with
+# ls /app/slack.sqlite
+```        
 
 
 ## Archiving New Messages
@@ -41,7 +42,7 @@ You can access the volume directly with
 When running, ArchiveBot will continue to archive new messages for any channel it
 is invited to.  To add the bot to your channels:
 
-        /invite @ArchiveBot
+       /invite @ArchiveBot
 
 If @ArchiveBot is the name you gave your bot user.
 
