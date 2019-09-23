@@ -30,7 +30,7 @@ Download the archive and export it to a directory called ```directory-with-initi
 
 You can access the volume directly with 
 
-        docker run -it -rm --mount source=slack-archive-bot,target=/app ubuntu
+        docker run -it --rm --mount source=slack-archive-bot,target=/app ubuntu
         # then you'll see the slack.sqlite file with
         # ls /app/slack.sqlite
         
