@@ -19,7 +19,7 @@ Dockerized version of https://github.com/docmarionum1/slack-archive-bot
 
 1. Run the container 
 
-      docker run  --mount source=slack-archive-bot,target=/app slack-archive-bot
+        docker run  --mount source=slack-archive-bot,target=/app slack-archive-bot
 
 
 ## Archiving New Messages
