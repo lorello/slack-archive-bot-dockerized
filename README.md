@@ -11,11 +11,11 @@ Dockerized version of https://github.com/docmarionum1/slack-archive-bot
 1. Clone this repo 
 1. Build docker container with 
 
-        docker build --build-arg slack_api_token=XXXXXXXXXXXXXXXXXXXXX -t slack-archive-bot .
+       docker build --build-arg slack_api_token=XXXXXXXXXXXXXXXXXXXXX -t slack-archive-bot .
 
 1. Create a volume where to store the sqlite database file (```slack.sqlite```)
 
-        docker volume create  slack-archive-bot
+       docker volume create  slack-archive-bot
 
 1. (Skip in case you do not care about importing historical data into your archive)
 [Export your team's slack history.](https://get.slack.help/hc/en-us/articles/201658943-Export-your-team-s-Slack-history)
@@ -23,16 +23,16 @@ Download the archive and export it to a directory called ```directory-with-initi
 
 1. Run the container 
 
-        docker run  --mount source=slack-archive-bot,target=/app slack-archive-bot
+       docker run  --mount source=slack-archive-bot,target=/app slack-archive-bot
 
 
 ## Docker tips
 
 You can access the volume directly with 
 
-        docker run -it --rm --mount source=slack-archive-bot,target=/app ubuntu
-        # then you'll see the slack.sqlite file with
-        # ls /app/slack.sqlite
+       docker run -it --rm --mount source=slack-archive-bot,target=/app ubuntu
+       # then you'll see the slack.sqlite file with
+       # ls /app/slack.sqlite
         
 
 
