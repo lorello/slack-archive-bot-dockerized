@@ -6,12 +6,12 @@ Dockerized version of https://github.com/docmarionum1/slack-archive-bot
 
 1. Create an app in your Slack: https://api.slack.com/apps and click "Create new App"
 1. Create a "Bot User" for that app: click "Bot Users" in app settings, then "Add a Bot User": username ```archivebot```, Display Name: ```ArchiveBot```
-1. Install the app in your Slack Worplace
+1. Install the app in your Slack Worplace: go to "OAuth & Permissions" and click on "Install App to Workspace"
 1. You will need the "Bot User OAuth Access Token" you can see at the "OAuth & Permissions" menu, in the ```<API_TOKEN>``` below (please note: you will see this token only *after* installing the app in your workspace)
 1. Clone this repo 
 1. Build docker container with 
 
-        docker build slack_api_token=XXXXXXXXXXXXXXXXXXXXX -t slack-archive-bot .
+        docker build --build-arg slack_api_token=XXXXXXXXXXXXXXXXXXXXX -t slack-archive-bot .
 
 1. Create a volume where to store the sqlite database file (```slack.sqlite```)
 
