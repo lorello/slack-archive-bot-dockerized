@@ -4,6 +4,7 @@ ARG slack_api_token
 
 # Use a volume as working directory 
 WORKDIR /app
+# Work around for COPY failed: stat /var/lib/docker/tmp/../directory-with-initial-export: no such file or directory
 COPY . ./
 
 # install requirements

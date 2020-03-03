@@ -1,0 +1,5 @@
+/export
+**.sqlite
+/Dockerfile
+/README.md*
+/LICENSE
